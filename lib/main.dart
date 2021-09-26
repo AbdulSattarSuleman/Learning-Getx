@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_getx/views/MyDialog.dart';
+import 'package:learning_getx/views/bottom_sheet.dart';
 import 'package:learning_getx/views/home_page.dart';
 
 void main() {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: MyBottomSheet(),
     );
   }
 }
