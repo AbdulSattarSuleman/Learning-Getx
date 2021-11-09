@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/dialog',
       // home: MyDialogBox(),
       getPages: [
-        GetPage(name: '/snackbar', page: () => MySnackBar()),
-        GetPage(name: '/bottom/:productdata', page: () => MyBottomSheet()),
+        GetPage(name: '/snackbar', page: () =>const MySnackBar()),
+        GetPage(name: '/bottom/:productdata', page: () =>const MyBottomSheet()),
         GetPage(name: '/dialog', page: () => MyDialogBox())
       ],
     );
