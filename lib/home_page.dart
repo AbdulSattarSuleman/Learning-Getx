@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Getx Storage')),
+      appBar: AppBar(title: const Text('Getx Storage')),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(30),
@@ -37,8 +37,17 @@ class HomePage extends StatelessWidget {
                           snackPosition: SnackPosition.BOTTOM);
                     }
                   },
-                  child: Text('Submit')),
-              ElevatedButton(onPressed: () {}, child: Text('View Data')),
+                  child: const Text('Submit')),
+              ElevatedButton(
+                  onPressed: () {
+                    homeController.updateEmail("${storage.read('email')}");
+                    // homeController.email.value = '';
+                  },
+                  child: const Text('View Data')),
+
+              Obx(() {
+                return Text("${homeController.email.value}");
+              })
             ],
           ),
         ),

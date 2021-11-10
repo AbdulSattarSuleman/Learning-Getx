@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetWidget {
-  const HomeController({Key? key}) : super(key: key);
+class HomeController extends GetxController {
+  var email = ''.obs;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        // child: Text(${HomeController.status}),
-        );
+  void updateEmail(String newEmail) {
+    email.value = newEmail;
   }
 }
